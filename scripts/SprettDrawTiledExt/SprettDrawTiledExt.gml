@@ -6,10 +6,9 @@
 /// @param {Real} y
 /// @param {Real} xScale
 /// @param {Real} yScale
-/// @param {Real} rotation
 /// @param {Constant.Color} color
 /// @param {Real} alpha
-function SprettDrawTiledExt(_sprite, _subImage, _x, _y, _xScale, _yScale, _rotation, _color, _alpha)
+function SprettDrawTiledExt(_sprite, _subImage, _x, _y, _xScale, _yScale, _color, _alpha)
 {
     static _system = __SprettSystem();
     
@@ -25,13 +24,13 @@ function SprettDrawTiledExt(_sprite, _subImage, _x, _y, _xScale, _yScale, _rotat
             __SprettError($"Sprite sub image of `{_subImage}` exceeds sprite number of `{sprite_get_number(_sprite)}`");
         }
         
-        draw_sprite_tiled_ext(_sprite, _subImage, _x, _y, _xScale, _yScale, _rotation, _color, _alpha);
+        draw_sprite_tiled_ext(_sprite, _subImage, _x, _y, _xScale, _yScale, _color, _alpha);
         return;
     }
     
     var _sprettSprite = __SprettEvaluate(_sprite, abs(_subImage));
     
-    draw_sprite_tiled_ext(_sprite, _sprettSprite.imageIndex, _x, _y, _xScale, _yScale, _rotation, _color, _alpha);
+    draw_sprite_tiled_ext(_sprite, _sprettSprite.imageIndex, _x, _y, _xScale, _yScale, _color, _alpha);
     
     return _sprettSprite;
 }

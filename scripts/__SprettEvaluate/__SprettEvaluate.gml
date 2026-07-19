@@ -17,5 +17,5 @@ function __SprettEvaluate(_sprite, _imageSpeed)
     
     _sprettSprite.__drawn = true;
     
-    return _imageSpeed;
+    return _sprettSprite;
 }
