@@ -35,6 +35,20 @@ To install this library, [download the latest .yymps](https://github.com/AlubJ/S
 # Usage
 The wrapper functions follow the convention of `SprettDraw*` and mimics the usage of their respective draw function. `SprettDraw` will mimic `draw_sprite`, `SprettDrawStretchedExt` will mimic `draw_sprite_stretched_ext` and so on. The only difference is that a negative sub image value will be treated as a positive speed relative to the sprite speed set in the sprite editor.
 
+## Functions
+| **Sprett** | **GameMaker** |
+|---|---|
+| `SprettDraw` | `draw_sprite` |
+| `SprettDrawExt` | `draw_sprite_ext` |
+| `SprettDrawGeneral` | `draw_sprite_general` |
+| `SprettDrawPart` | `draw_sprite_part` |
+| `SprettDrawPartExt` | `draw_sprite_part_ext` |
+| `SprettDrawPos` | `draw_sprite_pos` |
+| `SprettDrawStretched` | `draw_sprite_stretched` |
+| `SprettDrawStretchedExt` | `draw_sprite_stretched_ext` |
+| `SprettDrawTiled` | `draw_sprite_tiled_ext` |
+| `SprettDrawTiledExt` | `draw_sprite_tiled_ext` |
+
 # Performance Considerations
 During testing, I could draw about 5,000 induvidually animating sprites at a comfortable FPS. Any sprites that get drawn without animating will passthrough to the normal `draw_sprite_*` functions and will skip the image index evaluation. If you don't need sprite animation, you should use the regular drawing functions to skip the small overhead that these functions incur.
 
