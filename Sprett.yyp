@@ -15,7 +15,9 @@
     {"$GMFolder":"","%Name":"Debugging","folderPath":"folders/Sprett/(System)/Debugging.yy","name":"Debugging","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"sprett_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"sprett_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -23,6 +25,7 @@
   },
   "name":"Sprett",
   "resources":[
+    {"id":{"name":"objExample","path":"objects/objExample/objExample.yy",},},
     {"id":{"name":"objTest","path":"objects/objTest/objTest.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"__SprettClean","path":"scripts/__SprettClean/__SprettClean.yy",},},
