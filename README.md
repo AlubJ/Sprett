@@ -33,7 +33,7 @@ Sprett is a library that provides wrapper functions for all sprite drawing to al
 To install this library, [download the latest .yymps](https://github.com/AlubJ/Sprett/releases/latest) and import into GameMaker using `Tools >> Import Local Package`. Just import all the scripts and you're set!
 
 # Usage
-The wrapper functions follow the convention of `SprettDraw*` and mimics the usage of their respective draw function. `SprettDraw` will mimic `draw_sprite`, `SprettDrawStretchedExt` will mimic `draw_sprite_stretched_ext` and so on. The only difference is that a negative sub image value will be treated as a positive speed relative to the sprite speed set in the sprite editor.
+The wrapper functions follow the convention of `SprettDraw*` and mimics the usage of their respective draw function. `SprettDraw` will mimic `draw_sprite`, `SprettDrawStretchedExt` will mimic `draw_sprite_stretched_ext` and so on. The only difference is that a negative sub image value will be treated as a positive speed relative to the sprite speed set in the sprite editor, including any additional per-image durations.
 
 ## Functions
 | **Sprett** | **GameMaker** |
