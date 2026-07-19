@@ -7,7 +7,8 @@ function __SprettGetSprite(_sprite)
     
     with (_system)
     {
-        var _hash = md5_string_utf8($"{sprite_get_name(_sprite)}{__drawCommand++}");
+        var _callstack = debug_get_callstack(3)[2];
+        var _hash = md5_string_utf8($"{sprite_get_name(_sprite)}{_callstack}");
         
         if (variable_struct_exists(__spriteMap, _hash))
         {
