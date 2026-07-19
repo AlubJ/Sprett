@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettClean()
 {
     static _system = __SprettSystem();

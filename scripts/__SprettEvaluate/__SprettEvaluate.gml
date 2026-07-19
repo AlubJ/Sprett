@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettEvaluate(_sprite, _imageSpeed)
 {
     var _sprettSprite = __SprettGetSprite(_sprite);

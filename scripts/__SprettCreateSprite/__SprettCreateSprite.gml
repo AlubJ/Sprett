@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettCreateSprite(_sprite, _hash)
 {
     static _system = __SprettSystem();

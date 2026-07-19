@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettWarn(_string)
 {
     if (SPRETT_RUNNING_FROM_IDE)

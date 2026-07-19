@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettTick()
 {
     static _system = __SprettSystem();

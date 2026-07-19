@@ -1,4 +1,6 @@
 // Feather disable all
+
+/// @ignore
 function __SprettTrace()
 {
     var _string = "Sprett: ";

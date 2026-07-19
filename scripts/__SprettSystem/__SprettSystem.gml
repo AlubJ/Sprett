@@ -2,6 +2,7 @@
 
 __SprettSystem();
 
+/// @ignore
 function __SprettSystem()
 {
     static _system = undefined;

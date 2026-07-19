@@ -1,5 +1,6 @@
 // Feather disable all
 
+/// @ignore
 function __SprettWrap(_value, _max)
 {
     if (_max)
