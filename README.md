@@ -35,7 +35,7 @@ To install this library, [download the latest .yymps](https://github.com/AlubJ/S
 # Usage
 The wrapper functions follow the convention of `SprettDraw*` and mimics the usage of their respective draw function. `SprettDraw` will mimic `draw_sprite`, `SprettDrawStretchedExt` will mimic `draw_sprite_stretched_ext` and so on. The only difference is that a negative sub image value will be treated as a positive speed relative to the sprite speed set in the sprite editor, including any additional per-image durations.
 
-If the function used is an animating sprite, it will return back a struct that has some members that you can use in other sprite drawing functions. This is useful if you want to draw many of the same sprite animating at the same time but only want to do the evaluation once. The only useful information that exists in the struct is `imageIndex`.
+If the function used is an animating sprite, it will return back a struct that has some members that you can use in other sprite drawing functions. This is useful if you want to draw many of the same sprite animating at the same time but only want to do the evaluation once. The only useful information that exists in the struct is `imageIndex`. If the sprite is not animating the function will return `undefined`.
 
 ```js
 var _sprett = SprettDrawExt(sprUIHeart, -1, 10, 10, 1, 1, 0, c_black, 1);
