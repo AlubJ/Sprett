@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__SprettClean",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__SprettClean",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Sprett/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

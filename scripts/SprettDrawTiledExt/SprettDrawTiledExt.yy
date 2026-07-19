@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SprettDrawTiledExt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SprettDrawTiledExt",
+  "parent":{
+    "name":"Sprett",
+    "path":"folders/Sprett.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

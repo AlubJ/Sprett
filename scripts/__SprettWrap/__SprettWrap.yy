@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__SprettWrap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__SprettWrap",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/Sprett/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

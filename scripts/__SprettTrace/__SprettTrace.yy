@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__SprettTrace",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__SprettTrace",
+  "parent":{
+    "name":"Debugging",
+    "path":"folders/Sprett/(System)/Debugging.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
