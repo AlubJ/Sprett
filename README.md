@@ -37,8 +37,10 @@ The wrapper functions follow the convention of `SprettDraw*` and mimics the usag
 
 If the function used is an animating sprite, it will return back a struct that has some members that you can use in other sprite drawing functions. This is useful if you want to draw many of the same sprite animating at the same time but only want to do the evaluation once. The only useful information that exists in the struct is `imageIndex`. If the sprite is not animating the function will return `undefined`.
 
+Each Sprett draw function has one optional parameter to define a unique ID, if this is not defined the unique ID will be created using the draw order of this call. If you need animation consistency, you should make sure this parameter has a unique string ID.
+
 ```js
-var _sprett = SprettDrawExt(sprUIHeart, -1, 10, 10, 1, 1, 0, c_black, 1);
+var _sprett = SprettDrawExt(sprUIHeart, -1, 10, 10, 1, 1, 0, c_black, 1, "SpriteCall1");
 draw_sprite(sprUIHeart, _sprett.imageIndex, 11, 11);
 ```
 
@@ -57,7 +59,7 @@ draw_sprite(sprUIHeart, _sprett.imageIndex, 11, 11);
 | `SprettDrawTiledExt` | `draw_sprite_tiled_ext` |
 
 # How does it work?
-When a call is made to one of the above functions, we use the sprite name and the draw index to generate a hash to store the relevant information about the sprite. The draw function will then evaluate what image index is needed before drawing the sprite for you. Every 10 frames Sprett will clear out sprites that have not been drawn within those 10 frames and the sprites that have been drawn will be marked for cleanup unless a draw function is called again. I will probably stagger the cleanup to eleviate the performance hit that mass cleanup every 10 frames takes. Because the draw order is necessary to generate the hash, whenever the draw order changes the sprites will be re-evaluated and might restart the animation.
+When a call is made to one of the above functions, we use the sprite name and the draw index to generate a hash to store the relevant information about the sprite. The draw function will then evaluate what image index is needed before drawing the sprite for you. Every 10 frames Sprett will clear out sprites that have not been drawn within those 10 frames and the sprites that have been drawn will be marked for cleanup unless a draw function is called again. I will probably stagger the cleanup to eleviate the performance hit that mass cleanup every 10 frames takes. Because the draw order is necessary to generate the hash, whenever the draw order changes the sprites will be re-evaluated and might restart the animation. To avoid this, set a unique ID for the sprite draw.
 
 # Performance Considerations
 During testing, I could draw about 5,000 individually animating sprites at a comfortable FPS. Any sprites that get drawn without animating will pass through to the normal `draw_sprite_*` functions and will skip the image index evaluation. If you don't need sprite animation, you should use the regular drawing functions to skip the small overhead that these functions incur.
