@@ -1,14 +1,14 @@
 // Feather disable all
 
 /// @ignore
-function __SprettGetSprite(_sprite)
+function __SprettGetSprite(_sprite, _uid)
 {
     static _system = __SprettSystem();
     
     with (_system)
     {
-        var _callstack = debug_get_callstack(3)[2];
-        var _hash = md5_string_utf8($"{sprite_get_name(_sprite)}{_callstack}");
+        var _id = (_uid == undefined) ? __drawCommand++ : _uid;
+        var _hash = md5_string_utf8($"{sprite_get_name(_sprite)}{}");
         
         if (variable_struct_exists(__spriteMap, _hash))
         {

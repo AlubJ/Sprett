@@ -4,13 +4,19 @@
 /// @param {Real} subImage
 /// @param {Real} x
 /// @param {Real} y
-function SprettDraw(_sprite, _subImage, _x, _y)
+/// @param {String} [UID]
+function SprettDraw(_sprite, _subImage, _x, _y, _uid = undefined)
 {
     static _system = __SprettSystem();
     
     if (!sprite_exists(_sprite))
     {
         __SprettError($"Sprite index `{_sprite}` does not exist");
+    }
+    
+    if (_uid != undefined && !is_string(_uid))
+    {
+        __SprettError($"The unique ID of the draw must be a string or `undefined`");
     }
     
     if (_subImage >= 0)
@@ -24,7 +30,7 @@ function SprettDraw(_sprite, _subImage, _x, _y)
         return;
     }
     
-    var _sprettSprite = __SprettEvaluate(_sprite, abs(_subImage));
+    var _sprettSprite = __SprettEvaluate(_sprite, abs(_subImage), _uid);
     
     draw_sprite(_sprite, _sprettSprite.imageIndex, _x, _y);
     
